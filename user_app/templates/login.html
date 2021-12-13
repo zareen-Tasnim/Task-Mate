@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Login-Task Mate!</title>
+{% endblock title %}
+
+{% block content %}
+</br>
+    <div class="container">
+        <form method="POST">
+           {% csrf_token %}
+           {{form|crispy}}
+           <button type="Login">Login</button>
+        </form>
+    </div>  
+{% endblock content %}
